@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html data-theme="light" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,5 +31,44 @@
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <section id="login">
+      <div class="min-h-screen max-w-md mx-auto bg-base-200">
+        <div class="logo w-[200px] pt-[210px] mx-auto">
+          <img src="./assets/Logo-full.png" alt="" />
+        </div>
+        <div class="form mt-8">
+          <div
+            class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="label text-neutral font-bold"
+                  >Mobile Number</label
+                >
+                <input
+                  type="text"
+                  minlength="11"
+                  maxlength="11"
+                  class="input rounded-full bg-base-200"
+                  placeholder="Enter your number"
+                />
+                <label class="label text-neutral font-bold">4 Digit Pin</label>
+                <input
+                  type="password"
+                  minlength="4"
+                  maxlength="4"
+                  class="input rounded-full bg-base-200"
+                  placeholder="Enter 4 Digit Pin"
+                />
+                <button class="btn btn-neutral mt-4 bg-primary rounded-full">
+                  Login
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
