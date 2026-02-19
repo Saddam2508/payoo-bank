@@ -1,12 +1,12 @@
-document.getElementById("cashout-btn").addEventListener("click", function () {
+document.getElementById('cashout-btn').addEventListener('click', function () {
   //1.get the agent number & validate
-  const agentNum = getValue("agent-number");
+  const agentNum = getValue('agent-number');
   if (agentNum.length !== 11) {
-    alert("Invalid number");
+    alert('Invalid number');
     return;
   }
   //2.get the amount, validate, convert to Number
-  const amount = getValue("cashout-amount");
+  const amount = getValue('cashout-amount');
   const amountConvert = Number(amount);
 
   //3.get the current balance, validate, convert to Number
@@ -17,16 +17,17 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
   //5.true:: show and alert > set Balance
   if (newBalance < 0) {
-    alert("Invalid amount ");
+    alert('Invalid amount ');
     return;
   }
   //6.get the pin and verify
-  const pin = getValue("cashout-pin");
+  const pin = getValue('cashout-pin');
 
-  if (pin === "1234") {
-    alert("withdraw success");
+  if (pin === '1234') {
     setBalance(newBalance);
+    alert('withdraw success');
+    history(amountConvert, agentNum);
   } else {
-    return alert("Invalid pin number");
+    return alert('Invalid pin number');
   }
 });

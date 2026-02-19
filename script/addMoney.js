@@ -1,28 +1,29 @@
-document.getElementById("add-btn").addEventListener("click", function () {
-  const bankAccount = getValue("select-bank");
+document.getElementById('add-btn').addEventListener('click', function () {
+  const bankAccount = getValue('select-bank');
 
-  if (bankAccount === "Select back") {
-    alert("select a bank");
+  if (bankAccount === 'Select back') {
+    alert('select a bank');
     return;
   }
 
-  const bankAccountNum = getValue("bank-account");
+  const bankAccountNum = getValue('bank-account');
   if (bankAccountNum.length !== 11) {
-    alert("Invalid Account Number");
+    alert('Invalid Account Number');
   }
 
-  const addMoney = getValue("add-amount");
+  const addMoney = getValue('add-amount');
 
-  const balance = getBalance();
+  const currentBalance = getBalance();
 
-  const newBalance = balance + Number(addMoney);
+  const newBalance = currentBalance + Number(addMoney);
 
-  const pin = getValue("add-pin");
+  const pin = getValue('add-pin');
 
-  if (pin === "1234") {
+  if (pin === '1234') {
     setBalance(newBalance);
-    alert("add money success");
+    alert('add money success');
+    history(addMoney, bankAccount)
   } else {
-    alert("Invalid pin");
+    alert('Invalid pin');
   }
 });
