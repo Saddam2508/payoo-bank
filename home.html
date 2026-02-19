@@ -88,7 +88,10 @@
           <img src="./assets/opt-2.png" alt="" />
           <p>Cashout</p>
         </button>
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showOnly('send-money')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="./assets/opt-3.png" alt="" />
           <p>Send Money</p>
         </button>
@@ -100,7 +103,10 @@
           <img src="./assets/opt-5.png" alt="" />
           <p>Pay Bill</p>
         </button>
-        <button onclick="showOnly('history')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showOnly('history')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="./assets/opt-6.png" alt="" />
           <p>Transactions</p>
         </button>
@@ -207,6 +213,52 @@
       </div>
     </section>
 
+    <section id="send-money" class="w-11/12 mx-auto py-5 hidden">
+      <h2 class="text-xl font-bold mb-5">Send Money</h2>
+      <div class="card bg-base-100 w-full mx-auto">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold"
+              >User Account Number</label
+            >
+            <input
+              type="text"
+              id="user-account"
+              minlength="11"
+              maxlength="11"
+              value=""
+              class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter 11 digit number"
+            />
+            <label class="label text-neutral font-bold">Amount</label>
+            <input
+              type="number"
+              id="send-amount"
+              minlength="4"
+              maxlength="4"
+              class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter amount to transfer"
+            />
+            <label class="label text-neutral font-bold">Pin Number</label>
+            <input
+              type="password"
+              id="send-pin"
+              minlength="4"
+              maxlength="4"
+              class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter 4 digit pin number"
+            />
+            <button
+              id="send-btn"
+              class="btn btn-neutral mt-4 bg-primary rounded-full"
+            >
+              Send Now
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
     <section id="history" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-5">Transactions</h2>
       <div id="history-container" class=""></div>
@@ -215,5 +267,6 @@
     <script src="./script/helpers.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/sendMoney.js"></script>
   </body>
 </html>
