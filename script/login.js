@@ -11,6 +11,6 @@ document.getElementById('login-btn').addEventListener('click', function () {
     return;
   } else {
     alert('login success');
-    window.location.assign('../home.html');
+    window.location.assign('home.html');
   }
 });
