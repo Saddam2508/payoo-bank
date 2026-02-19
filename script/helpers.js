@@ -43,3 +43,10 @@ function history(money, bankAccount) {
   `;
   historyContainer.appendChild(div);
 }
+
+function handleMenu(element, id) {
+  const buttons = document.querySelectorAll('.menu-btn');
+  buttons.forEach((button) => button.classList.remove('bg-primary/50'));
+  element.classList.add('bg-primary/50');
+  showOnly(id);
+}
