@@ -10,7 +10,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const amountConvert = Number(amount);
 
   //3.get the current balance, validate, convert to Number
-  const balance = getBalance("balance");
+  const balance = getBalance();
 
   //4.calculate new balance
   const newBalance = balance - amountConvert;

@@ -3,8 +3,8 @@ function getValue(id) {
   const value = input.value;
   return value;
 }
-function getBalance(id) {
-  const input = document.getElementById(id);
+function getBalance() {
+  const input = document.getElementById("balance");
   const value = input.innerText;
   return Number(value);
 }
